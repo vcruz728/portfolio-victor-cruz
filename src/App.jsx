@@ -1,22 +1,27 @@
-import { useState } from 'react'
 import './App.css'
-import { projects } from './data/projects';
-import ProjectCard from './components/ProjectCard';
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Skills from './components/Skills';
+import Projects from "./components/Projects";
+import Contact from './components/Contact';
+import Footer from "./components/Footer";
 
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-    <main className="p-8">
-      <h1 className="text-4xl font-bold mb-6">My Portfolio Victor Cruz</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {projects.map((proj, i) => (
-          <ProjectCard key={i} {...proj} />
-        ))}
-      </div>
-    </main>
+    <div className="font-sans text-zinc-900 dark:text-white dark:bg-zinc-900">
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
     </>
   );
 }

@@ -1,12 +1,16 @@
-// components/ProjectCard.jsx
-export default function ProjectCard({ title, description, link }) {
+// src/components/ProjectCard.jsx
+export default function ProjectCard({ title, tech, image, github, live }) {
   return (
-    <div className="p-4 border rounded-lg shadow hover:shadow-lg transition">
-      <h3 className="text-xl font-bold">{title}</h3>
-      <p className="text-sm">{description}</p>
-      <a href={link} className="text-blue-500 mt-2 inline-block" target="_blank">
-        View Project
-      </a>
+    <div className="rounded-lg overflow-hidden shadow-lg transition hover:scale-105 bg-white dark:bg-zinc-800">
+      <img src={image} alt={title} className="w-full h-40 object-cover" />
+      <div className="p-4">
+        <h3 className="text-xl font-bold">{title}</h3>
+        <p className="text-sm mb-2">{tech.join(" • ")}</p>
+        <div className="flex gap-4">
+          <a href={github} target="_blank" className="text-blue-600 underline">GitHub</a>
+          <a href={live} target="_blank" className="text-green-600 underline">Live</a>
+        </div>
+      </div>
     </div>
   );
 }
