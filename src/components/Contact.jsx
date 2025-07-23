@@ -46,7 +46,7 @@ export default function Contact() {
             <input
               type="hidden"
               name="_next"
-              value="http://localhost:5173/thank-you"
+              value="https://portfolio-victor-cruz.netlify.app/thank-you"
             />
             <input type="hidden" name="_captcha" value="false" />
           </form>
